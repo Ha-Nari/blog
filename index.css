@@ -1,12 +1,15 @@
 /* .article-list-box 시작 */
+
 .article-list-box {
     margin-top:10px;
+    text-align:center;
 }
 
 .article-list-box > ul > li > a {
     display: block;
     padding:5px;
     padding-left:0;
+    background-color:pink
 }
 
 .article-list-box > ul > li > a::before {
