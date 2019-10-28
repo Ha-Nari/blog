@@ -1,8 +1,43 @@
+/* .title-box 시작 */
+.title-box-1 .name-box > ul > li > a {
+    float:left;
+    box-sizing:border-box;
+}
+
+.title-box-1 > a {
+    color: blueviolet;
+    padding-left:auto;
+    padding-right:auto;
+}
+
+/* .title-box 끝 */
+
+
 /* .article-list-box 시작 */
 
 .article-list-box {
     margin-top:10px;
     text-align:center;
+}
+
+.article-list-box > ul {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 10px;
+    max-width:1000px;
+
+    }
+
+.article-list-box > ul > li {
+    display: inline-block;
+    max-width: 100%;
+
+    
+}
+
+.article-list-box > ul > li > a::before {
+    content: "";
+    clear:both;
 }
 
 .article-list-box > ul > li > a {
@@ -20,3 +55,4 @@
     background-color:#afafaf;
 }
 /* .article-list-box 끝 */ 
+

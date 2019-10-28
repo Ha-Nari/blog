@@ -1,6 +1,6 @@
 /* 자주 사용하는 라이브러리 */
 /* 노말라이즈 */
-body, ul, li, h1 {
+body, ul, li {
     margin:0;
     padding:0;
     list-style:none;
@@ -37,10 +37,6 @@ a {
     box-sizing:border-box;
 }
 
-.margin-0-auto {
-    margin:0 auto;
-}
-
 .block {
     display:block;
 }
@@ -51,6 +47,14 @@ a {
 
 .text-align-center {
     text-align:center;
+}
+
+.line-height-0 {
+    line-height:0;
+}
+
+.line-height-1 {
+    line-height:100%;
 }
 
 .line-height-0-ch-only {
