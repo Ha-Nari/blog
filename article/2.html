@@ -1,18 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <div class="logo-bn-bar">
-        <div class="logo-bn">
-            <ul>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-            </ul>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+        html {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        /* 노말라이즈 */
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* 라이브러리 */
+        .con {
+            margin: 0 auto;
+        }
+
+        .img-box>img {
+            width: 100%;
+            display: block;
+        }
+
+        .row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .cell {
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .cell-right {
+            float: right;
+            box-sizing: border-box;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute-left {
+            position: absolute;
+            left: 0;
+        }
+
+        .absolute-right {
+            position: absolute;
+            right: 0;
+        }
+
+        .absolute-middle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+
+        /* 커스텀 */
+        .con {
+            width: 1150px;
+        }
+
+        .con-min-width {
+            min-width: 1280px;
+        }
+
+        /* 탑바 */
+        .top-bar {
+            background-color: black;
+            color: white;
+
+        }
+
+        .top-bar>.menu-1>ul>li {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .top-bar .menu-1>ul>li>a {
+            display: block;
+            padding: 5px 10px;
+            font-size: 0.77rem;
+        }
+
+        .top-bar .menu-1>ul>li:last-child>a {
+            margin-right: 30px;
+        }
+
+        .top-bar .menu-1>ul>li.my-shop-li>a::after {
+            content: "♥";
+            color: red;
+
+        }
+
+        /* 탑바 끝 */
+
+        /* 상단메뉴 1 시작*/
+
+        .menu-bar {
+            position: relative;
+        }
+
+        .menu-bar .menu-1 {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+
+        .menu-bar .menu-1>ul>li>a {
+            display: block;
+            padding: 0 7px;
+            font-weight: bold;
+            color: #afafaf;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .menu-bar .menu-1>ul>li:hover>a {
+            color: black;
+        }
+
+        .menu-bar .menu-1>ul>li:not(:last-child)>a::after {
+            content: "ㅣ";
+            position: absolute;
+        }
+
+        /* 상단메뉴 1 끝*/
+
+        /* 상단메뉴 2 시작*/
+        .menu-bar .logo {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        /* 상단메뉴 2 끝*/
+
+        /* 상단메뉴 3 - 서치메뉴*/
+
+        .menu-bar .search-box>input {
+            padding: 10px;
+            padding-right: 30px;
+        }
+
+        .menu-bar .search-box>input:focus {
+            border: 1px solid black;
+        }
+
+        .menu-bar .search-box>img {
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+        /* 상단메뉴 3 -서치메뉴*/
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="top-bar con-min-width">
+        <div class="con row">
+            <nav class="menu-1 cell-right">
+                <ul class="row">
+                    <li class="cell"><a href="#">로그인</a></li>
+                    <li class="cell"><a href="#">회원가입</a></li>
+                    <li class="cell my-shop-li"><a href="#">MY SHOP</a></li>
+                    <li class="cell"><a href="#">장바구니</a></li>
+                    <li class="cell"><a href="#">주문조회</a></li>
+                    <li class="cell"><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    </head>
-<body>
 
+    <div class="menu-bar con">
+        <nav class="menu-1 absolute-left absolute-meddle">
+            <ul class="row">
+                <li class="cell"><a href="#">NOTICE</a></li>
+                <li class="cell"><a href="#">EVENT</a></li>
+                <li class="cell"><a href="#">REVIE</a></li>
+                <li class="cell"><a href="#">BLOGGER</a></li>
+                <li class="cell"><a href="#">PR</a></li>
+                <li class="cell"><a href="#">FAQ</a></li>
+                <li class="cell"><a href="#">Q&amp;A</a></li>
+            </ul>
+        </nav>
+        <a class="logo-bar inline-block absolute-meddle" href="http://vivienne.kr/" target="_blank">
+            <img class="logo block" src="http://vivienne.kr/web/upload/goodymall40/logo.gif" alt=""></a>
+            
+        <form class="search-box absolute-right absolute-meddle">
+            <input type="text" placeholder="검색어를 입력해주세요.">
+            <img class="absolute-right" src="http://vivienne.kr/web/upload/goodymall40/layout/btn_search.gif" alt="">
+        </form>
+    </div>
 </body>
+
+</html>
