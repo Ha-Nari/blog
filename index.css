@@ -1,58 +1,60 @@
-/* .title-box 시작 */
-.title-box-1 .name-box > ul > li > a {
-    float:left;
-    box-sizing:border-box;
+/* 로고 */
+tittle > nav {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.title-box-1 > a {
-    color: blueviolet;
-    padding-left:auto;
-    padding-right:auto;
+tittle > div {
+    height: 4px;
+    background-color: black;
+    margin-top: 10px;
 }
 
-/* .title-box 끝 */
+/* 로고 끝 */
 
+/* first-box-1 :모작 시작 */
+.article-list-box {
+    text-align: center;
+    max-width: 100%;
+    
+
+}
+
+.article-list-box .first-box-1 {
+    background-color: dimgray;
+    display: inline-block;
+    padding:10px 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top:20px;
+    color: whitesmoke
+}
+
+/* first-box-1 끝 */
 
 /* .article-list-box 시작 */
 
-.article-list-box {
-    margin-top:10px;
-    text-align:center;
-}
-
-.article-list-box > ul {
-    display: inline-block;
-    margin: 0 10px;
+.article-list-box .menu-box > div {
+    margin-top:20px;
+    background-color: #dfdfdf;
+    display:inline-block;
+    padding:5px 10px;
     border-radius: 10px;
-    max-width:1000px;
-
-    }
-
-.article-list-box > ul > li {
-    display: inline-block;
-    max-width: 100%;
-
-    
+    margin-left: 10px;
 }
 
-.article-list-box > ul > li > a::before {
-    content: "";
-    clear:both;
+.article-list-box .menu-box > div:first-child {
+    margin-left:-10px;
 }
-
-.article-list-box > ul > li > a {
+.article-list-box .menu-box > div > a {
     display: block;
-    padding:5px;
-    padding-left:0;
-    background-color:pink
 }
+ 
 
-.article-list-box > ul > li > a::before {
-    content:"- ";
-}
-
-.article-list-box > ul > li:hover > a {
-    background-color:#afafaf;
+.article-list-box .menu-box > div:hover > a {
+    color:white;
+    font-weight: bold;
 }
 /* .article-list-box 끝 */ 
 
