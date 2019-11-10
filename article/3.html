@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../lib.css">
-    <link rel="stylesheet" href="../common.css">
-    <link rel="stylesheet" href="./article.css">
-    
     <style>
-        body {
+        body, ul, li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-transform: uppercase;
             
         }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .top-bn {
+            padding: 5%;
+            background-color: black;
+            color: dimgray;
+            text-align: center;
+            font-size: 0.9rem;
+
+        }
+        
+        .top-bn:hover > div {
+            color: aliceblue;
+        }
+        
+        .top-logo-box {
+            height: 50px;
+            max-width: 1000px;
+            border:5px solid red;
+            position: relative;
+            padding: 10px;
+        }
+        
+        .top-logo-box .logo-box-1 {
+            border:5px solid green; 
+            position: absolute;
+        }
+        
+        .top-logo-box .logo-box-1 .menu-box {
+            font-weight: bold;
+            border: 5px solid blue;
+
+        }
+        
     </style>
+    </head>
     
-    <div class="logo-bn-bar">
-        <div class="logo-bn">
-            <ul>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-                <li><a href="" herf="#">메뉴</a></li>
-            </ul>
+<!---------HTML---------->    
+      
+<body>
+<div class="top-bn">
+    <div>f u n d i n g</div>
+</div>
+
+<div class="top-logo-box">
+    <div class="logo-box-1">
+       <div class="menu-box">
+        <div>stay</div>
+        <div>folio</div>
         </div>
     </div>
-    </head>
-<body>
+</div>
 
+<section>
+    <div class="img-box">
+        <img src="" alt="">
+    </div>
+</section>
 </body>
