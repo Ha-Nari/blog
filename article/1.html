@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
             list-style: none;
+
         }
 
         a {
@@ -28,6 +29,7 @@
         /*라이브러리*/
         .con {
             margin: 0 auto;
+            max-width: 1000px;
         }
 
         .img-box>img {
@@ -41,9 +43,14 @@
             clear: both;
         }
 
-        .cell {
+        .cell,
+        .cell-right {
             float: left;
             box-sizing: border-box;
+        }
+
+        .cell-right {
+            float: right;
         }
 
         /*커스텀*/
@@ -55,44 +62,54 @@
         .con {
             max-width: 1000px;
         }
+        /*메뉴명*/
 
-        div {
+        .logo {
             text-align: center;
+            padding: 25px;
         }
 
-        div>a {
-            text-align: center;
-            font-size:3rem;
-            font-weight: bold;
-        }
 
-        .menu-box {
-            position: relative;
-
-        }
-
-        .menu-box ul {
-            text-align: center;
-            padding-top: 10px;
-
-        }
-
-        .menu-box>ul>li {
-            display: inline-block;
-            margin-left: 20px;
+        .menu-box>ul>li {    
             text-transform: uppercase;
-
-        }
-
-        .menu-box>ul>li>a {
+            width: 14%;
+            text-align: center;
             position: relative;
-            padding: 0 50%;
+        }
+        
+        .menu-box>ul>li>a:before{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: black;
+            top:0;
+            left:0;
+            transform: :translateY(-50%);
+            
+        }
+        .menu-box>ul>li:last-child >a:after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: black;
+            top:0;
+            right:0;
+            transform: :translateY(-50%);
+            
         }
 
-        .menu-box>ul>li>a {
+
+        .menu-box ul>li>a {
             font-size: 0.8rem;
             font-weight: bold;
             display: block;
+
+        }
+
+        .menu-box ul>li:hover>a {
+            color: red;
         }
 
         /* 상단 메뉴 박스 1*/
@@ -102,6 +119,74 @@
 
         }
 
+        /* 메인 이미지 시작*/
+        .main-img-box {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        /* 메인 이미지 끝*/
+        /* 상품 이미지 시작*/
+
+        .prod-list-box {
+            padding-top: 30px;
+        }
+        
+        .prod-list-box > ul > li {
+            padding:15px;
+        }
+        .prod-list-box > ul {
+            margin:-15px;
+        }
+
+        @media (min-width:901px) {
+            .prod-list-box>ul>li {
+                width: 25%;
+            }
+
+
+            .prod-list-box>ul>li:nth-child(3n+1) {
+                width: 50%;
+            }
+
+            .prod-list-box>ul {
+                position: relative;
+            }
+
+            .prod-list-box>ul>li:nth-last-child(1),
+            .prod-list-box>ul>li:nth-last-child(2) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .prod-list-box>ul>li:nth-last-child(2) {
+                left: 25%;
+            }
+        }
+
+        @media (max-width:900px) {
+            .prod-list-box>ul>li {
+                width: 33.3333%;
+            }
+
+
+            .prod-list-box>ul>li:nth-child(3n+1) {
+                width: 66.6666%;
+            }
+
+            @media (max-width:700px) {
+                .prod-list-box>ul>li {
+                    width: 50%;
+                }
+
+
+                .prod-list-box>ul>li:nth-child(3n+1) {
+                    width: 100%;
+                }
+
+                /* 상품 이미지 끝 */
+
     </style>
 
 
@@ -109,25 +194,47 @@
     <!---------------HTML-------------->
 
 <body>
-    <div>
-        <a href="#" target="_blank">BNX</a>
+    <div class="logo">
+        <img src="http://bnx.oa.gg/img/logo.gif" alt="">
     </div>
 
 
     <div class="menu-box con">
-        <ul>
-            <li><a href="#">brand</a></li>
-            <li><a href="#">visual </a></li>
-            <li><a href="#">style</a></li>
-            <li><a href="#">media</a></li>
-            <li><a href="#">news</a></li>
-            <li><a href="#">store</a></li>
-            <li><a href="#">customer</a></li>
+        <ul class="row">
+            <li class="cell"><a href="#">brand</a></li>
+            <li class="cell"><a href="#">visual </a></li>
+            <li class="cell"><a href="#">style</a></li>
+            <li class="cell"><a href="#">media</a></li>
+            <li class="cell"><a href="#">news</a></li>
+            <li class="cell"><a href="#">store</a></li>
+            <li class="cell"><a href="#">customer</a></li>
         </ul>
     </div>
 
-    <div class="top-menu-box">
-        <img src="" alt="">
+    <div class="main-img-box img-box con">
+        <img src="http://bnx.oa.gg/img/20160913AM105101_1074.jpg" alt="">
+    </div>
+    <div class="prod-list-box con">
+        <ul class="row">
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160921PM33800_8489.jpg" alt=""></div>
+            </li>
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160913PM122312_9304.jpg" alt=""></div>
+            </li>
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160913PM122323_2917.jpg" alt=""></div>
+            </li>
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160913PM122333_5909.jpg" alt=""></div>
+            </li>
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160913PM122345_286.jpg" alt=""></div>
+            </li>
+            <li class="cell">
+                <div class="img-box"><img src="http://bnx.oa.gg/img/20160913PM122357_7873.jpg" alt=""></div>
+            </li>
+        </ul>
     </div>
 
 </body>
