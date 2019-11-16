@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
 
 <head>
     <style>
@@ -52,6 +54,12 @@
         .cell-right {
             float: right;
         }
+        .text-align-center {
+            text-align: center;
+        }
+        .inline-block {
+            display: inline-block;
+        }
 
         /*커스텀*/
         html,
@@ -62,6 +70,33 @@
         .con {
             max-width: 1000px;
         }
+
+        .ico {
+            position: relative;
+            width: 25px;
+            height: 17px;
+            display: inline-block;
+
+        }
+
+        .ico>div {
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            height: 20%;
+            top: 0;
+            left: 0;
+            border-radius: 70px;
+        }
+
+        .ico>div:nth-child(2) {
+            top: 40%;
+        }
+
+        .ico>div:nth-child(3) {
+            top: 80%;
+        }
+
         /*메뉴명*/
 
         .logo {
@@ -70,34 +105,66 @@
         }
 
 
-        .menu-box>ul>li {    
+        .menu-box>ul>li {
             text-transform: uppercase;
             width: 14%;
             text-align: center;
             position: relative;
         }
-        
-        .menu-box>ul>li>a:before{
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 20px;
-            background-color: black;
-            top:0;
-            left:0;
-            transform: :translateY(-50%);
-            
+
+        @media (max-width:701px) {
+            .menu-box {
+                display: none;
+            }
+            .logo {
+                display: none;
+            }
         }
-        .menu-box>ul>li:last-child >a:after{
+
+        .mobile {
+            line-height: 0;
+            box-sizing: border-box;
+        }
+        .mobile .ico {
+            margin: 20px;
+        }
+
+        .mobile  .m-logo {
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        .mobile > .m-logo > img {
+            width: 60px;
+        }
+        
+        .mobile > i  {
+            font-size: 2rem;
+            margin: 10px;
+        }
+
+        .menu-box>ul>li>a:before {
             content: "";
             position: absolute;
             width: 2px;
             height: 20px;
             background-color: black;
-            top:0;
-            right:0;
+            top: 0;
+            left: 0;
             transform: :translateY(-50%);
-            
+
+        }
+
+        .menu-box>ul>li:last-child>a:after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: black;
+            top: 0;
+            right: 0;
+            transform: :translateY(-50%);
+
         }
 
 
@@ -131,12 +198,13 @@
         .prod-list-box {
             padding-top: 30px;
         }
-        
-        .prod-list-box > ul > li {
-            padding:15px;
+
+        .prod-list-box>ul>li {
+            padding: 15px;
         }
-        .prod-list-box > ul {
-            margin:-15px;
+
+        .prod-list-box>ul {
+            margin: -15px;
         }
 
         @media (min-width:901px) {
@@ -198,6 +266,19 @@
         <img src="http://bnx.oa.gg/img/logo.gif" alt="">
     </div>
 
+    <div class="mobile row con text-align-center">
+        <div class="ico toggle-side-bar-bn cell ">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="m-logo">
+            <img class="inline-block" src="http://bnx.oa.gg/img/logo.gif" alt="">
+        </div>
+           <i class="fas fa-share-alt cell-right "></i>
+            
+        </div>
+
 
     <div class="menu-box con">
         <ul class="row">
@@ -210,6 +291,9 @@
             <li class="cell"><a href="#">customer</a></li>
         </ul>
     </div>
+
+
+
 
     <div class="main-img-box img-box con">
         <img src="http://bnx.oa.gg/img/20160913AM105101_1074.jpg" alt="">
