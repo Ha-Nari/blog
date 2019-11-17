@@ -1,14 +1,28 @@
 /* 로고 */
-tittle > nav {
+tittle > .logo {
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    background-color: black;
+    color: aliceblue;
 }
 
-tittle > div {
-    height: 4px;
-    background-color: black;
-    margin-top: 10px;
+tittle > .logo > div {
+    padding-top: 10px;;
+    font-size: 1.5rem;
+
+}
+
+tittle > .logo > ul > li {
+    font-size: 0.5rem;
+    text-align:center;
+    display:inline-block;
+}
+
+tittle > .logo > ul > li > a {
+    padding: 0 3px;
+}
+tittle > .logo > ul > li > a:hover{
+        color:powderblue;
+    
 }
 
 /* 로고 끝 */
@@ -17,17 +31,17 @@ tittle > div {
 .article-list-box {
     text-align: center;
     max-width: 100%;
-    
+
 
 }
 
 .article-list-box .first-box-1 {
     background-color: dimgray;
     display: inline-block;
-    padding:10px 20px;
+    padding: 10px 20px;
     font-size: 1.5rem;
     border-radius: 10px;
-    margin-top:20px;
+    margin-top: 20px;
     color: whitesmoke
 }
 
@@ -36,25 +50,26 @@ tittle > div {
 /* .article-list-box 시작 */
 
 .article-list-box .menu-box > div {
-    margin-top:20px;
+    margin-top: 20px;
     background-color: #dfdfdf;
-    display:inline-block;
-    padding:5px 10px;
+    display: inline-block;
+    padding: 5px 10px;
     border-radius: 10px;
     margin-left: 10px;
 }
 
 .article-list-box .menu-box > div:first-child {
-    margin-left:-10px;
+    margin-left: -10px;
 }
+
 .article-list-box .menu-box > div > a {
     display: block;
 }
- 
+
 
 .article-list-box .menu-box > div:hover > a {
-    color:white;
+    color: white;
     font-weight: bold;
 }
-/* .article-list-box 끝 */ 
 
+/* .article-list-box 끝 */
