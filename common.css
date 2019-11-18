@@ -6,16 +6,18 @@ html {
 }
 
 .con {
-    max-width:1150px;
+    max-width: 1150px;
 }
 
 .con-min-width {
-    min-width:320px;
+    min-width: 320px;
 }
 
-html, body {
-    overflow-x:hidden;
+html,
+body {
+    overflow-x: hidden;
 }
 
 a:hover {
-    color:red;
+    color: red;
+}

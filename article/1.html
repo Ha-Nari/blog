@@ -54,14 +54,29 @@
         .cell-right {
             float: right;
         }
+
         .text-align-center {
             text-align: center;
         }
+
         .inline-block {
             display: inline-block;
         }
 
         /*커스텀*/
+
+
+        .visible-on-sm-down {
+            display: none;
+        }
+
+        @media (max-width:700px) {
+            .visible-on-sm-down {
+                display: block;
+            }
+        }
+
+
         html,
         body {
             overflow-x: hidden;
@@ -116,6 +131,7 @@
             .menu-box {
                 display: none;
             }
+
             .logo {
                 display: none;
             }
@@ -125,20 +141,21 @@
             line-height: 0;
             box-sizing: border-box;
         }
+
         .mobile .ico {
             margin: 20px;
         }
 
-        .mobile  .m-logo {
+        .mobile .m-logo {
             display: inline-block;
             margin: 20px;
         }
-        
-        .mobile > .m-logo > img {
+
+        .mobile>.m-logo>img {
             width: 60px;
         }
-        
-        .mobile > i  {
+
+        .mobile>i {
             font-size: 2rem;
             margin: 10px;
         }
@@ -242,18 +259,20 @@
             .prod-list-box>ul>li:nth-child(3n+1) {
                 width: 66.6666%;
             }
+        }
 
-            @media (max-width:700px) {
-                .prod-list-box>ul>li {
-                    width: 50%;
-                }
+        @media (max-width:700px) {
+            .prod-list-box>ul>li {
+                width: 50%;
+            }
 
 
-                .prod-list-box>ul>li:nth-child(3n+1) {
-                    width: 100%;
-                }
+            .prod-list-box>ul>li:nth-child(3n+1) {
+                width: 100%;
+            }
+        }
 
-                /* 상품 이미지 끝 */
+        /* 상품 이미지 끝 */
 
     </style>
 
@@ -266,7 +285,7 @@
         <img src="http://bnx.oa.gg/img/logo.gif" alt="">
     </div>
 
-    <div class="mobile row con text-align-center">
+    <div class="mobile row con text-align-center visible-on-sm-down">
         <div class="ico toggle-side-bar-bn cell ">
             <div></div>
             <div></div>
@@ -275,9 +294,9 @@
         <div class="m-logo">
             <img class="inline-block" src="http://bnx.oa.gg/img/logo.gif" alt="">
         </div>
-           <i class="fas fa-share-alt cell-right "></i>
-            
-        </div>
+        <i class="fas fa-share-alt cell-right "></i>
+
+    </div>
 
 
     <div class="menu-box con">
